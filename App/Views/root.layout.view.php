@@ -15,7 +15,7 @@
 <body>
 <nav class="navbar navbar-expand-sm bg-dark navbar-dark justify-content-end">
     <div class="container">
-        <a class="navbar-brand" href="#">FRI-MVC FW </a>
+        <a class="navbar-brand" href="#">Klub statočných turistov</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
             <span class="navbar-toggler-icon"></span>
         </button>
