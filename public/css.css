@@ -1,0 +1,59 @@
+html, body {
+    height: 100%;
+}
+body {
+    display: flex;
+    flex-direction: column;
+}
+.obsah {
+    flex: 1 0 auto; /* Prevent Chrome, Opera, and Safari from letting these items shrink to smaller than their content's default minimum size. */
+    padding: 20px;
+}
+.footer {
+    flex-shrink: 0; /* Prevent Chrome, Opera, and Safari from letting these items shrink to smaller than their content's default minimum size. */
+    padding: 20px;
+}
+
+.komentare {
+    height: 105px;
+    width: 260px;
+    overflow: auto;
+}
+
+.tlacidlo-nav {
+    position: relative;
+    display: flex;
+    height: 40px;
+    text-decoration: none;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin-right: 5px;
+    padding: 10px;
+    float: left;
+    color: white;
+    -webkit-transition-duration: 0.5s;
+    box-shadow:0px 0 0 #31708f  inset;
+}
+.tlacidlo-nav:hover {
+    box-shadow: 100px 0 0 #31708f inset;
+    color: white;
+}
+
+.tlacidlo-border {
+    border: 1px solid #31708f;
+    border-radius: 4px;
+}
+
+.odkaz {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.odkaz:hover {
+    color: #31708f;
+}
+
+
+
