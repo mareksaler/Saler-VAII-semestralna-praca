@@ -59,21 +59,21 @@
     <!-- TLACIDLA -->
     <div class="row">
         <div class="col-lg-4 uvod-tlacidla">
-            <a href="vysoke_tatry.html"><img class="centrovanie" src="public/img/vysoke_tatry.png" height="250" width="300" alt="Vysoke Tatry"/>
+            <a href="?c=tatry&a=vysokeTatry"><img class="centrovanie" src="public/img/vysoke_tatry.png" height="250" width="300" alt="Vysoke Tatry"/>
                 <div class="nadpis">
                     <h1>Vysoké Tatry</h1>
                 </div>
             </a>
         </div>
         <div class="col-lg-4 uvod-tlacidla">
-            <a href="zapadne_tatry.html"><img class="centrovanie" src="public/img/zapadne_tatry.png" height="250" width="300" alt="Zapadne Tatry"/>
+            <a href="?c=tatry&a=zapadneTatry"><img class="centrovanie" src="public/img/zapadne_tatry.png" height="250" width="300" alt="Zapadne Tatry"/>
                 <div class="nadpis">
                     <h1>Západné Tatry</h1>
                 </div>
             </a>
         </div>
         <div class="col-lg-4 uvod-tlacidla">
-            <a href="nizke_tatry.html"><img class="centrovanie" src="public/img/nizke_tatry.jpg" height="250" width="300" alt="Nizke Tatry"/>
+            <a href="?c=tatry&a=nizkeTatry"><img class="centrovanie" src="public/img/nizke_tatry.jpg" height="250" width="300" alt="Nizke Tatry"/>
                 <div class="nadpis">
                     <h1>Nízke Tatry</h1>
                 </div>
