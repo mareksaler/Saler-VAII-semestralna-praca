@@ -71,13 +71,13 @@
                         <a href="?c=home" class="odkaz">Domov</a>
                     </li>
                     <li>
-                        <a href="#" class="odkaz">Vysoké Tatry</a>
+                        <a href="?c=tatry&a=vysokeTatry" class="odkaz">Vysoké Tatry</a>
                     </li>
                     <li>
-                        <a href="#" class="odkaz">Nízke Tatry</a>
+                        <a href="?c=tatry&a=nizkeTatry" class="odkaz">Nízke Tatry</a>
                     </li>
                     <li>
-                        <a href="#" class="odkaz">Západné Tatry</a>
+                        <a href="?c=tatry&a=zapadneTatry" class="odkaz">Západné Tatry</a>
                     </li>
                     <li>
                         <a href="#" class="odkaz">Akcie 2022</a>
