@@ -33,8 +33,6 @@ class HomeController extends AControllerRedirect
         );
     }
 
-
-
     public function addLike()
     {
         $postId = $this->request()->getValue('postid');

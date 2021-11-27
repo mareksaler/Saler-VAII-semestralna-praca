@@ -32,4 +32,5 @@ class Auth
         unset($_SESSION['name']);
         session_destroy();
     }
+
 }
