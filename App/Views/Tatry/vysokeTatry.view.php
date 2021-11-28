@@ -79,27 +79,37 @@
                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                             </div>
                             <div class="modal-body">
-                                <form method="post" nctype="multipart/form-data" action="">
+                                <form method="post" enctype="multipart/form-data" action="?c=Tatry&a=pridaj">
                                     <div>
                                         <div class="mb-3">
                                             <label for="nazov" class="form-label">Názov:</label>
-                                            <input type="text" id="nazov" name="nazov" class="form-control">
+                                            <input type="text" id="nazov" name="nazov" class="form-control" maxlength="254" required>
                                         </div>
                                         <div class="mb-3">
                                             <label for="formFile" class="form-label">Obrázok</label>
-                                            <input name="file" class="form-control" id="formFile" type="file">
+                                            <input name="file" class="form-control" id="formFile" type="file" required>
                                         </div>
                                         <div class="mb-3">
                                             <label for="popis" class="form-label">Popis:</label>
-                                            <textarea class="form-control" id="popis" rows="10"></textarea>
+                                            <textarea class="form-control" id="popis" rows="10" name="popis" required></textarea>
                                         </div>
+                                        <div class="mb-3">
+                                            <label for="dlzka" class="form-label">Dĺžka:</label>
+                                            <input type="number" id="dlzka" name="dlzka" class="form-control" required>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="cas" class="form-label">Čas:</label>
+                                            <input type="time" id="cas" name="cas" class="form-control" required>
+                                        </div>
+                                        <input type="hidden" name="area" value="v" class="form-control" required>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Zrušiť</button>
+                                        <button type="submit" class="btn btn-primary">Pridať</button>
                                     </div>
                                 </form>
                             </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Zrušiť</button>
-                                <button type="button" class="btn btn-primary">Pridať</button>
-                            </div>
+
                         </div>
                     </div>
                 </div>
@@ -111,14 +121,43 @@
     <div class="row farba-text p-2 rounded-2 border border-dark mb-4">
         <div class="d-flex justify-content-start flex-wrap">
             <?php foreach ($data['vysokeTatry'] as $vysokeTatry) { ?>
-                <a href="#" data-bs-toggle="modal" data-bs-target="#vysokeTatry<?=$vysokeTatry->getId()?>">
-                <div class="card" style="width: 18rem; margin: 5px">
-                    <img src="<?= \App\Config\Configuration::UPLOAD_DIR . $vysokeTatry->getImage() ?>" height="160px" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title"><?=$vysokeTatry->getName()?></h5>
+                <?php if (\App\Auth::isLogged()) { ?>
+                    <div class="card" style="width: 18rem; margin: 5px">
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#vysokeTatry<?=$vysokeTatry->getId()?>">
+                            <img src="<?= \App\Config\Configuration::UPLOAD_DIR . $vysokeTatry->getImage() ?>" height="160px" class="card-img-top" alt="...">
+                        </a>
+                        <div class="card-body">
+                            <a href="#" data-bs-toggle="modal" data-bs-target="#vysokeTatry<?=$vysokeTatry->getId()?>">
+                                <h5 class="card-title"><?=$vysokeTatry->getName()?></h5>
+                            </a>
+                            <div class="row">
+                                <div class="col ">
+                                    <form method="post" action="?c=tatry&a=odstranit">
+                                        <input type="hidden" name="ID" value="<?=$vysokeTatry->getId()?>">
+                                        <button type="submit" class="btn btn-primary btn-sm">Vymazať</button>
+                                    </form>
+                                </div>
+                                <div class="col">
+                                    <form method="post" action="?c=tatry&a=upravit">
+                                        <input type="hidden" name="ID" value="<?=$vysokeTatry->getId()?>">
+                                        <button type="submit" name="upravit" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#pridajTuru">Upraviť</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                </a>
+                <?php } else {?>
+                    <a href="#" data-bs-toggle="modal" data-bs-target="#vysokeTatry<?=$vysokeTatry->getId()?>">
+                        <div class="card" style="width: 18rem; margin: 5px">
+                            <img src="<?= \App\Config\Configuration::UPLOAD_DIR . $vysokeTatry->getImage() ?>" height="160px" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title"><?=$vysokeTatry->getName()?></h5>
+                            </div>
+                        </div>
+                    </a>
+                <?php }?>
+
+
 
                 <!-- Modal -->
                 <div class="modal fade" id="vysokeTatry<?=$vysokeTatry->getId()?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
