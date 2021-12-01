@@ -111,7 +111,7 @@ class TatryController extends AControllerRedirect
             $this->redirect("tatry","vysokeTatry",['error_pridanie' => 'Dlzka moze byt len 0.01 az 100']);
             return;
         }
-        if (!strtotime($_POST['cas']) )  {
+        if (!strtotime($_POST['cas']) & $_POST['dlzka'] != null)  {
             $this->redirect("tatry","vysokeTatry",['error_pridanie' => 'Nevyplneny cas.']);
             return;
         }
