@@ -1,4 +1,5 @@
 <!-- modal-->
+
 <div class="modal fade" id="upravTuru<?=$vysokeTatry->getId()?>" tabindex="-1" data-bs-backdrop="static" aria-labelledby="upravTuruLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
@@ -25,7 +26,7 @@
                         </div>
                         <div class="mb-3">
                             <label for="dlzka" class="form-label">Dĺžka:</label>
-                            <input type="number" id="dlzka" name="dlzka" class="form-control" value="<?= $vysokeTatry->getDistance() ?>" required>
+                            <input type="number" id="dlzka" name="dlzka" class="form-control" step="0.01" min="0.01" max="100" value="<?= $vysokeTatry->getDistance() ?>" required>
                         </div>
                         <div class="mb-3">
                             <label for="cas" class="form-label">Čas:</label>

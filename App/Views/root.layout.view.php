@@ -10,7 +10,6 @@
     <!-- Responzivnost na mobilnych zariadeniach -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="public/css.css">
-
 </head>
 <body>
 <nav class="navbar navbar-expand-sm bg-dark navbar-dark justify-content-end">

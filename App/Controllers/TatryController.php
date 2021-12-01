@@ -83,7 +83,11 @@ class TatryController extends AControllerRedirect
 //                $tatry->setImage($name);
                 $tatry = Tatry::getOne($_POST['uprav']);
                // $tatry = $this->request()->getValue('uprav');
-                $tatry->setName($_POST['nazov']);
+        if ($_POST['nazov'] == "") {
+            $this->redirect('tatry','vysokeTatry', ['error' => 'Prosim vypln nazov!']);
+        } else {
+            $tatry->setName($_POST['nazov']);
+        }
                 $tatry->setText($_POST['popis']);
                 $tatry->setDistance($_POST['dlzka']);
                 $tatry->setTime($_POST['cas']);

@@ -62,7 +62,7 @@
             </div>
 
     </div>
-    <div class="row">
+    <div class="row p-1">
         <?php if (\App\Auth::isLogged()) { ?>
             <div class="col">
                 <!-- Button trigger modal -->
@@ -84,7 +84,7 @@
                             <img src="<?= \App\Config\Configuration::UPLOAD_DIR . $vysokeTatry->getImage() ?>" height="160px" class="card-img-top" alt="...">
                         </a>
                         <div class="card-body">
-                            <a href="#" data-bs-toggle="modal" data-bs-target="#vysokeTatry<?=$vysokeTatry->getId()?>">
+                            <a href="#" data-bs-toggle="modal" class="karta-nadpis" data-bs-target="#vysokeTatry<?=$vysokeTatry->getId()?>">
                                 <h5 class="card-title"><?=$vysokeTatry->getName()?></h5>
                             </a>
                             <div class="row">
@@ -107,7 +107,7 @@
                         </div>
                     </div>
                 <?php } else {?>
-                    <a href="#" data-bs-toggle="modal" data-bs-target="#vysokeTatry<?=$vysokeTatry->getId()?>">
+                    <a href="#" data-bs-toggle="modal" class="karta-nadpis" data-bs-target="#vysokeTatry<?=$vysokeTatry->getId()?>">
                         <div class="card karta">
                             <img src="<?= \App\Config\Configuration::UPLOAD_DIR . $vysokeTatry->getImage() ?>" height="160px" class="card-img-top" alt="...">
                             <div class="card-body">
