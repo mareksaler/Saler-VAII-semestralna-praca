@@ -1,3 +1,4 @@
+<?php /** @var Array $vysokeTatry */ ?>
 <!-- Modal -->
 <div class="modal fade" id="vysokeTatry<?=$vysokeTatry->getId()?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">
@@ -8,10 +9,10 @@
             </div>
             <div class="modal-body">
                 <div class="row">
-                    <img src="<?= \App\Config\Configuration::UPLOAD_DIR . $vysokeTatry->getImage() ?>" min-height="400px" class="card-img-top" alt="...">
+                    <img src="<?= \App\Config\Configuration::UPLOAD_DIR . $vysokeTatry->getImage() ?>"  class="card-img-top" alt="...">
                 </div>
-                <div class="row">
-                    <div class="col">
+                <div class="row p-1">
+                    <div class="col p">
                         <h6>Čas: <?=$vysokeTatry->getTime()?></h6>
                     </div>
                     <div class="col">

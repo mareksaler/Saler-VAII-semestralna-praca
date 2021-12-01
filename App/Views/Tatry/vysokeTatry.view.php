@@ -69,6 +69,14 @@
                 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#pridajTuru">
                     Pridať túru
                 </button>
+                <?php if($data['error_pridanie'] != "") { ?>
+                    <div class="col">
+                        <div class="alert alert-danger alert-dismissible">
+                            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                            <?=$data['error_pridanie']?>
+                        </div>
+                    </div>
+                <?php } ?>
                 <?php include "tatry/pridatForm.php"; ?>
             </div>
         <?php } else { ?>

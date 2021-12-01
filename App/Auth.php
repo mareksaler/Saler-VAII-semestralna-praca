@@ -2,6 +2,8 @@
 
 namespace App;
 
+use App\Models\Pouzivatel;
+
 class Auth
 {
     const LOGIN = 'a@a.sk';
@@ -9,12 +11,18 @@ class Auth
 
     public static function login($login, $password)
     {
-        if ($login == self::LOGIN && $password == self::PASSWORD) {
-            $_SESSION["name"] = $login;
-            return true;
-        } else {
-            return false;
+        $pouzivatelia = Pouzivatel::getAll();
+        foreach ($pouzivatelia as $pouzivatel) {
+            $email = $pouzivatel->getEmail();
+            $heslo = $pouzivatel->getHeslo();
+            if ($login == $email && $password == $heslo) {
+                $_SESSION["name"] = $login;
+                return true;
+            } else {
+                return false;
+            }
         }
+        return false;
     }
 
     public static function isLogged()
