@@ -21,7 +21,7 @@
                         <div class="mb-3">
                             <label for="popis" class="form-label">Popis:</label>
                             <textarea class="form-control" id="popis" rows="10" name="popis" >
-                                                                    <?= $vysokeTatry->getText() ?>
+                            <?= $vysokeTatry->getText() ?>
                             </textarea>
                         </div>
                         <div class="mb-3">
