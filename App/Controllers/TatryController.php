@@ -62,8 +62,16 @@ class TatryController extends AControllerRedirect
             $this->redirect("tatry","vysokeTatry",['error_pridanie' => 'Nevyplneny nazov.']);
             return;
         }
+        if (strlen($_POST['nazov']) > 50 )  {
+            $this->redirect("tatry","vysokeTatry",['error_pridanie' => 'Nazov nemoze byt viac ako 50 znakov.']);
+            return;
+        }
         if ($_POST['popis'] == "" || ctype_space($_POST['popis'] || ($_POST['popis'] == null)))  {
             $this->redirect("tatry","vysokeTatry",['error_pridanie' => 'Nevyplneny popis.']);
+            return;
+        }
+        if (strlen($_POST['popis']) > 5000)  {
+            $this->redirect("tatry","vysokeTatry",['error_pridanie' => 'Popis je moc dlhy.']);
             return;
         }
         if ($_POST['dlzka'] < 0.01 || $_POST['dlzka'] > 100 || ($_POST['dlzka'] == null))  {
@@ -103,8 +111,16 @@ class TatryController extends AControllerRedirect
             $this->redirect("tatry","vysokeTatry",['error_pridanie' => 'Nemozes vlozit medzery.']);
             return;
         }
+        if (strlen($_POST['nazov']) > 50 )  {
+            $this->redirect("tatry","vysokeTatry",['error_pridanie' => 'Nazov nemoze byt viac ako 50 znakov.']);
+            return;
+        }
         if (ctype_space($_POST['popis']))  {
             $this->redirect("tatry","vysokeTatry",['error_pridanie' => 'Nemozes vlozit medzery.']);
+            return;
+        }
+        if (strlen($_POST['popis']) > 5000)  {
+            $this->redirect("tatry","vysokeTatry",['error_pridanie' => 'Popis je moc dlhy.']);
             return;
         }
         if (($_POST['dlzka'] < 0.01 || $_POST['dlzka'] > 100 ) & $_POST['dlzka'] != null)  {
