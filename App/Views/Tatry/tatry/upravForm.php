@@ -12,7 +12,7 @@
                     <div>
                         <div class="mb-3">
                             <label for="nazov" class="form-label">Názov:</label>
-                            <input type="text" id="nazov" name="nazov" class="form-control" maxlength="254" value="<?=$vysokeTatry->getName()?>" >
+                            <input type="text" id="nazov" name="nazov" class="form-control" minlength="3" maxlength="50" value="<?=$vysokeTatry->getName()?>" >
                         </div>
                         <div class="mb-3">
                             <label for="formFile" class="form-label">Obrázok</label>
