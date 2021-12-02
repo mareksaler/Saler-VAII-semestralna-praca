@@ -38,9 +38,6 @@
             <ul class="navbar-nav">
             <?php if (\App\Auth::isLogged()) { ?>
                 <li class="nav-item">
-                    <a class="tlacidlo-nav" href="?c=home&a=post">Pridaj foto</a>
-                </li>
-                <li class="nav-item">
                     <a class="tlacidlo-nav tlacidlo-border" href="?c=auth&a=logout">Odhlásť</a>
                 </li>
             <?php } else { ?>
