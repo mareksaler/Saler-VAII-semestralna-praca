@@ -24,7 +24,13 @@
                     <a class="tlacidlo-nav" href="?c=home">Domov</a>
                 </li>
                 <li class="nav-item">
-                    <a class="tlacidlo-nav" href="?c=home&a=contact">Kontakt</a>
+                    <a class="tlacidlo-nav" href="?c=tatry&a=vysokeTatry">Vysoké Tatry</a>
+                </li>
+                <li class="nav-item">
+                    <a class="tlacidlo-nav" href="?c=tatry&a=nizkeTatry">Nízke Tatry</a>
+                </li>
+                <li class="nav-item">
+                    <a class="tlacidlo-nav" href="?c=tatry&a=zapadneTatry">Západné Tatry</a>
                 </li>
             </ul>
         </div>

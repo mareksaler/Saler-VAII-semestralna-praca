@@ -110,3 +110,7 @@ body {
     color: black;
 }
 
+.karta-nadpis:hover {
+    text-decoration: none;
+    color: #31708f;
+}
